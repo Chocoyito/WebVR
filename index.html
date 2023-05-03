@@ -1,16 +1,29 @@
 <html>
 <head>
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script src="js/script.js"></script>
 </head>
 <body>
     <a-scene>
         <!-- Assets -->
         <a-assets>
-            <img id="piso" src="assets/TexturesCom_Pavement_CobblestoneStreet2_header.jpg">
+            <img id="piso" src="assets/brick-walkway.jpg">
+            <img id="cielo" src="assets/blue-sky.jpg">
+            <a-asset-item id="kakariko" src="assets/scene.gltf"></a-asset-item>
         </a-assets>
 
-        <!-- Piso -->
-        <a-plane src="#piso" height="100" width="100" rotation="-90 0 0"></a-plane>
+        <!-- Cielo -->
+        <a-sky src="#cielo"></a-sky>
+
+
+        <!-- Kakariko -->
+
+        <a-entity gltf-model="#kakariko"></a-entity>
+
+        <!-- Camara -->
+        <a-entity id="camera" camera jump look-controls wasd-controls position="0 1.4 0"></a-entity> 
+        
+        
     </a-scene>
 </body>
 </html>
