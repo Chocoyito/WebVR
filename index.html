@@ -8,21 +8,22 @@
         <!-- Assets -->
         <a-assets>
             <img id="piso" src="assets/brick-walkway.jpg">
-            <img id="cielo" src="assets/blue-sky.jpg">
+            <!-- <img id="cielo" src="assets/blue-sky.jpg"> -->
             <a-asset-item id="kakariko" src="assets/scene.gltf"></a-asset-item>
+            <video src="assets/sky.mp4" preload="auto" autoplay loop="true" id="cielo"></video>
         </a-assets>
 
         <!-- Cielo -->
         <a-sky src="#cielo"></a-sky>
 
-
         <!-- Kakariko -->
-
         <a-entity gltf-model="#kakariko"></a-entity>
 
         <!-- Camara -->
         <a-entity id="camera" camera jump look-controls wasd-controls position="0 1.4 0"></a-entity> 
-        <a-entity sound="src: assets/The Legend of Zelda  A Link To The Past  Kakariko Village.mp3; loop: true; autoplay: true;" maxDistance="10000"></a-entity>
+
+        <!-- Musica -->
+        <a-entity sound="src: assets/The Legend of Zelda  A Link To The Past  Kakariko Village.mp3; loop: true; autoplay: true;"></a-entity>
         
     </a-scene>
 </body>
